@@ -31,11 +31,7 @@ def outGridview(inputArray,columnsArray,title):
     tree.configure(xscrollcommand=hsb.set, yscrollcommand=vsb.set)
 
     for input in inputArray:
-        dictionaries = []
-        for item in input:
-            dictionaries.append(item)
-            print(dictionaries)
-        tree.insert('',tk.END,values=(dictionaries))
+        tree.insert('',tk.END,values=(input))
 
     tree.pack(expand=True, fill='both')
     root.mainloop()
